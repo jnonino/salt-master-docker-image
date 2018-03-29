@@ -3,7 +3,7 @@ LABEL maintainer="Julian Nonino <noninojulian@outlook.com>"
 
 # Install Salt Master
 RUN yum update --assumeyes && \
-    yum install --assumeyes epel-release && \
+    yum install --assumeyes epel-release initscripts && \
     yum install --assumeyes https://repo.saltstack.com/yum/redhat/salt-repo-latest-2.el7.noarch.rpm && \
     yum clean expire-cache && \
     yum install --assumeyes salt-master
