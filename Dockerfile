@@ -1,5 +1,5 @@
 FROM centos:7
-LABEL maintainer="Julian Nonino <noninojulian@outlook.com>"
+LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # Install Salt Master
 RUN yum update --assumeyes && \
