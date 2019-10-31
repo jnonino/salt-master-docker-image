@@ -6,7 +6,9 @@ RUN yum update --assumeyes && \
     yum install --assumeyes epel-release initscripts && \
     yum install --assumeyes https://repo.saltstack.com/yum/redhat/salt-repo-latest-2.el7.noarch.rpm && \
     yum clean expire-cache && \
-    yum install --assumeyes salt-master
+    yum install --assumeyes salt-master && \
+    yum clean all && \
+    rm -rf /var/cache/yum
 
 # Set Environment variables and create code folder
 RUN mkdir -p /salt
